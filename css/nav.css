@@ -1,0 +1,87 @@
+#nav-top {
+  position: fixed;
+  width: 100vw;
+  z-index: 201;
+  top: 0;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  height: 3em;
+}
+#nav-top ul li {
+  font-family: urbane-rounded, circe-rounded, sans-serif;
+}
+
+#div-logo {
+  font-family: din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: #f8e6d8;
+  text-align: center;
+  padding: 0.25em;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#container-div-nav-side {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: -100vw;
+  top: 0;
+  z-index: 200;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#div-nav-side {
+  width: 80vw;
+  height: 100vh;
+  background-color: #836aa4;
+  z-index: 202;
+  position: absolute;
+}
+
+#div-nav-inactive {
+  width: 100vw;
+  height: 100vh;
+  z-index: 201;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#div-btn-nav {
+  line-height: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+  z-index: 300;
+}
+#div-btn-nav img {
+  width: auto;
+  height: 1em;
+}
+
+.list-categories {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.list-categories li {
+  font-size: 1rem;
+  color: #f8e6d8;
+  width: 50%;
+  text-align: center;
+  padding: 2em 0;
+}
+
+/*# sourceMappingURL=nav.css.map */

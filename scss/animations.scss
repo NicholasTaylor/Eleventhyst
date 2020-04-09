@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+
+@keyframes navOn {
+	0% {
+		background-color: $topNavOff;
+	}
+
+	100% {
+		background-color: $topNavOn;
+	}
+}
+
+@keyframes navOff {
+	0% {
+		background-color: $topNavOn;
+	}
+
+	100% {
+		background-color: $topNavOff;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutAndInactive {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes navSlideIn {
+	0% {
+		left: $sideNavOff;
+	}
+
+	100% {
+		left: $sideNavOn;
+	}
+}
+
+@keyframes navSlideOut {
+	0% {
+		left: $sideNavOn;
+	}
+
+	100% {
+		left: $sideNavOff;
+	}
+}

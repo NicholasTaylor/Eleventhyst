@@ -1,0 +1,3 @@
+#Ensures images directory is in repo but as an empty directory
+*
+!.gitignore

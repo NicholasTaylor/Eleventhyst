@@ -1,0 +1,52 @@
+@keyframes navOn {
+  0% {
+    background-color: rgba(131, 106, 164, 0);
+  }
+  100% {
+    background-color: #836aa4;
+  }
+}
+@keyframes navOff {
+  0% {
+    background-color: #836aa4;
+  }
+  100% {
+    background-color: rgba(131, 106, 164, 0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAndInactive {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes navSlideIn {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+@keyframes navSlideOut {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */
