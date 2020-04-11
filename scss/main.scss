@@ -1,5 +1,5 @@
-@import "mixins.scss";
+@import "variables.scss";
 
 h1, h2, h3, h4, h5, h6 {
-	@include altFontStack();
+	font-family: $altFontStack;
 }

@@ -1,5 +1,25 @@
+/* START Templates */
+/* START Campfire */
+/* END Campfire */
+/* START Snow */
+/* END Snow */
+/* START Aqua */
+/* END Aqua */
+/* START Aqua 2 */
+/* END Aqua 2 */
+/* START Sylvain */
+/* END Sylvain */
+/* START Aesthetic */
+/* END Aesthetic */
+/* END Templates */
+/* START Nav Animations */
+/* END Nav Animations */
+/* START Font Stacks */
+/* END Font STacks */
+/* START Miscellaneous */
+/* END Miscellaneous */
 h1, h2, h3, h4, h5, h6 {
-  font-family: urbane-rounded, circe-rounded, sans-serif;
+  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

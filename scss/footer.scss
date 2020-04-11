@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+#div-content-footer {
+	width: 100vw;
+	color: $color_text;
+	font-family: $altFontStack;
+}
+
+#nav-bottom, #div-copyright {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: $articleWidthMobile;
+	text-align: center;
+}
+
+#div-copyright {
+	font-size: 1rem;
+}
+
+#div-nav-bottom {
+	.list-categories {
+		width: initial;
+	}
+	padding-bottom: 1em;
+}
+
+
+/*START Tablet */
+@media (min-width: 768px) and (min-height: 421px){
+	#nav-bottom, #div-copyright {
+		width: $articleWidthTablet;
+	}	
+}
+/* END Tablet */
+
+
+/* START Laptop */
+@media (min-width: 1000px) and (min-height: 421px){
+	#nav-bottom, #div-copyright {
+		width: $articleWidthLaptop;
+	}	
+
+	#div-copyright {
+		font-size: 1.25rem;
+	}
+}
+/* END Laptop */
+
+/* START Desktop */
+@media (min-width: 1200px) and (min-height: 421px){
+	#div-copyright {
+		font-size: 1.5rem;
+	}	
+}
+/* END Desktop */

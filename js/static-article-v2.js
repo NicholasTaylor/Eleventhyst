@@ -1,4 +1,3 @@
-const fadeInText = document.getElementsByClassName('fade-in-text');
 const fadeFrom = document.getElementsByClassName('bg-fade-from');
 
 const changeAnimEl = (el,val) => {
@@ -12,7 +11,6 @@ const changeLoop = (coll,val) => {
 }
 
 const initFadeIn = () => {
-	changeLoop(fadeInText,'fadeIn');
 	changeLoop(fadeFrom,'fadeOutAndInactive');
 }
 

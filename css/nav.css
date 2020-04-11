@@ -1,3 +1,23 @@
+/* START Templates */
+/* START Campfire */
+/* END Campfire */
+/* START Snow */
+/* END Snow */
+/* START Aqua */
+/* END Aqua */
+/* START Aqua 2 */
+/* END Aqua 2 */
+/* START Sylvain */
+/* END Sylvain */
+/* START Aesthetic */
+/* END Aesthetic */
+/* END Templates */
+/* START Nav Animations */
+/* END Nav Animations */
+/* START Font Stacks */
+/* END Font STacks */
+/* START Miscellaneous */
+/* END Miscellaneous */
 #nav-top {
   position: fixed;
   width: 100vw;
@@ -8,11 +28,11 @@
   height: 3em;
 }
 #nav-top ul li {
-  font-family: urbane-rounded, circe-rounded, sans-serif;
+  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #div-logo {
-  font-family: din-2014, sans-serif;
+  font-family: din-2014, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1.75rem;
   color: #f8e6d8;
@@ -83,5 +103,79 @@
   text-align: center;
   padding: 2em 0;
 }
+
+/*START Micro Mobile */
+/* END Micro Mobile */
+/*START Tablet */
+@media (min-width: 768px) and (min-height: 421px) {
+  #nav-top {
+    height: fit-content;
+  }
+
+  #div-btn-nav, #div-nav-inactive {
+    display: none;
+  }
+
+  #div-logo, #div-nav-side {
+    left: 10vw;
+    transform: none;
+    position: relative;
+  }
+
+  #container-div-nav-side {
+    left: 0;
+    animation-name: none !important;
+    width: 100vw;
+    height: initial;
+    position: relative;
+  }
+
+  #div-nav-side {
+    width: 80vw;
+    height: initial;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .list-categories li {
+    width: initial;
+    padding: 0 1em 0.25em 0;
+  }
+
+  #div-logo, #container-div-nav-side {
+    padding: 0.25em 0;
+  }
+}
+/* END Tablet */
+/*START Laptop */
+@media (min-width: 1000px) and (min-height: 421px) {
+  #div-logo, #div-nav-side {
+    left: 15vw;
+  }
+
+  #div-nav-side {
+    width: 70vw;
+  }
+
+  #div-logo {
+    font-size: 2.25rem;
+  }
+
+  .list-categories li {
+    font-size: 1.25rem;
+  }
+}
+/* END Laptop */
+/*START Desktop */
+@media (min-width: 1200px) and (min-height: 421px) {
+  #div-logo {
+    font-size: 2.75rem;
+  }
+
+  .list-categories li {
+    font-size: 1.5rem;
+  }
+}
+/* END Desktop */
 
 /*# sourceMappingURL=nav.css.map */

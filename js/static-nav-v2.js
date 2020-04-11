@@ -12,6 +12,12 @@ const navToggle = () => {
 	}
 }
 
+const navToggleSpecial = () => {
+	if (window.innerWidth >= 768 && window.innerHeight >= 421) {
+		navSide.style.animationName = 'navSlideOut';
+	}
+}
+
 const navBgToggle = () => {
 	if (window.scrollY > 0 && (navDiv.style.animationName === 'navOff' || !(navDiv.style.animationName))){
 		navDiv.style.animationName = 'navOn';
@@ -25,3 +31,4 @@ window.addEventListener('load',()=>{navBgToggle();});
 window.addEventListener('resize',()=>{navBgToggle();});
 navBtn.addEventListener('click',()=>{navToggle();});
 navInactive.addEventListener('click',()=>{navToggle();});
+window.addEventListener('resize',()=>{navToggleSpecial();});

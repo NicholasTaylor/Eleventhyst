@@ -1,29 +1,65 @@
+/* START Templates */
+/* START Campfire */
 $campfire_color_bg_main: #073569;
 $campfire_color_bg_nav: #0B4376;
 $campfire_color_misc: #4C7A9E;
 $campfire_color_text: #F49F8B;
+/* END Campfire */
+
+/* START Snow */
 $snow_color_bg_main: #8EB2EE;
 $snow_color_bg_nav: #BC9FBB;
 $snow_color_misc: #ED739A;
 $snow_color_text: #EBE5F1;
-$aqua2_color_bg_main: #39A3CA;
-$aqua2_color_bg_nav: #379AB7;
-$aqua2_color_misc: #60C3E0;
-$aqua2_color_text: #D6EBF0;
+/* END Snow */
+
+/* START Aqua */
 $aqua_color_bg_main: #2D2942;
 $aqua_color_bg_nav: #0C7C92;
 $aqua_color_misc: #60C3E0;
 $aqua_color_text: #AFD6DD;
+/* END Aqua */
+
+/* START Aqua 2 */
+$aqua2_color_bg_main: #39A3CA;
+$aqua2_color_bg_nav: #379AB7;
+$aqua2_color_misc: #60C3E0;
+$aqua2_color_text: #D6EBF0;
+/* END Aqua 2 */
+
+/* START Sylvain */
 $sylvain_color_bg_main: #259599;
 $sylvain_color_bg_nav: #09A598;
 $sylvain_color_misc: #5FD37E;
 $sylvain_color_text: #7DE6D7;
+/* END Sylvain */
+
+/* START Aesthetic */
 $color_bg_main: #49619f;
 $color_bg_nav: #836aa4;
 $color_misc: #f597af;
 $color_text: #f8e6d8;
+/* END Aesthetic */
+/* END Templates */
+
+/* START Nav Animations */
 $topNavOn: rgba($color_bg_nav,1);
 $topNavOff: rgba($color_bg_nav,0);
 $sideNavOn: 0vw;
 $sideNavOff: -100vw;
+/* END Nav Animations */
+
+/* START Font Stacks */
+$mainFontStack: neue-haas-unica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$altFontStack: urbane-rounded, circe-rounded, Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monoFontStack: monotalic, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+/* END Font STacks */
+
+
+/* START Miscellaneous */
 $articleWidthMobile: 90vw;
+$articleWidthTablet: 80vw;
+$articleWidthLaptop: 70vw;
+$articleWidthDesktop: 50vw;
+/* END Miscellaneous */

@@ -1,15 +1,3 @@
-@mixin mainFontStack() {
-	font-family: neue-haas-unica, minion-3-display, sans-serif;
-}
-
-@mixin altFontStack() {
-	font-family: /*proxima-soft, museo-sans-rounded,*/ urbane-rounded, circe-rounded, sans-serif;
-}
-
-@mixin logoFontStack() {
-	font-family: din-2014, sans-serif;
-}
-
 @mixin pullquoteQuotes(){
     font-size: 14rem;
     font-family: "times new roman", serif;

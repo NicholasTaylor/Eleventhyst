@@ -1,4 +1,3 @@
-@import "mixins.scss";
 @import "variables.scss";
 
 #nav-top {
@@ -10,12 +9,12 @@
 	animation-fill-mode: forwards;
 	height: 3em;
 	ul li {
-		@include altFontStack();
+		font-family: $altFontStack;
 	}
 }
 
 #div-logo {
-    @include logoFontStack();
+    font-family: $logoFontStack;
     font-weight: 400;
     font-size: 1.75rem;
     color: $color_text;
@@ -86,3 +85,88 @@
 	    padding: 2em 0;
     }
 }
+
+
+/*START Micro Mobile */
+@media (max-width: 320px){
+
+}
+/* END Micro Mobile */
+
+
+/*START Tablet */
+@media (min-width: 768px) and (min-height: 421px){
+	#nav-top {
+		height: fit-content;
+	}
+
+	#div-btn-nav, #div-nav-inactive {
+		display: none;
+	}
+
+	#div-logo, #div-nav-side {
+		left: (100vw - $articleWidthTablet) / 2;
+		transform: none;
+		position: relative;
+	}
+
+	#container-div-nav-side {
+	    left: 0;
+	    animation-name: none !important;
+	    width: 100vw;
+	    height: initial;
+	    position: relative;
+}
+
+	#div-nav-side {
+	    width: $articleWidthTablet;
+	    height: initial;
+	    background-color: transparent;
+	    position: relative;
+	}
+
+	.list-categories li {
+	    width: initial;
+	    padding: 0 1em .25em 0;
+	}
+
+	#div-logo, #container-div-nav-side {
+		padding: 0.25em 0;
+	}
+	
+}
+/* END Tablet */
+
+
+/*START Laptop */
+@media (min-width: 1000px) and (min-height: 421px){
+	#div-logo, #div-nav-side {
+		left: (100vw - $articleWidthLaptop) / 2;
+	}
+
+	#div-nav-side {
+		width: $articleWidthLaptop;
+	}
+
+	#div-logo {
+		font-size: 2.25rem;
+	}
+
+	.list-categories li {
+	    font-size: 1.25rem;
+	}
+}
+/* END Laptop */
+
+
+/*START Desktop */
+@media (min-width: 1200px) and (min-height: 421px){
+	#div-logo {
+		font-size: 2.75rem;
+	}
+
+	.list-categories li {
+	    font-size: 1.5rem;
+	}
+}
+/* END Desktop */

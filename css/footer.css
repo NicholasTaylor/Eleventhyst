@@ -1,0 +1,72 @@
+/* START Templates */
+/* START Campfire */
+/* END Campfire */
+/* START Snow */
+/* END Snow */
+/* START Aqua */
+/* END Aqua */
+/* START Aqua 2 */
+/* END Aqua 2 */
+/* START Sylvain */
+/* END Sylvain */
+/* START Aesthetic */
+/* END Aesthetic */
+/* END Templates */
+/* START Nav Animations */
+/* END Nav Animations */
+/* START Font Stacks */
+/* END Font STacks */
+/* START Miscellaneous */
+/* END Miscellaneous */
+#div-content-footer {
+  width: 100vw;
+  color: #f8e6d8;
+  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#nav-bottom, #div-copyright {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  text-align: center;
+}
+
+#div-copyright {
+  font-size: 1rem;
+}
+
+#div-nav-bottom {
+  padding-bottom: 1em;
+}
+#div-nav-bottom .list-categories {
+  width: initial;
+}
+
+/*START Tablet */
+@media (min-width: 768px) and (min-height: 421px) {
+  #nav-bottom, #div-copyright {
+    width: 80vw;
+  }
+}
+/* END Tablet */
+/* START Laptop */
+@media (min-width: 1000px) and (min-height: 421px) {
+  #nav-bottom, #div-copyright {
+    width: 70vw;
+  }
+
+  #div-copyright {
+    font-size: 1.25rem;
+  }
+}
+/* END Laptop */
+/* START Desktop */
+@media (min-width: 1200px) and (min-height: 421px) {
+  #div-copyright {
+    font-size: 1.5rem;
+  }
+}
+/* END Desktop */
+
+/*# sourceMappingURL=footer.css.map */
