@@ -1,5 +1,31 @@
 @import "variables.scss";
 
+html, body {
+	font-size: 100%;
+	background-color: $color_bg_main;
+	color: $color_text;
+}
+
+body {
+	font-family: $mainFontStack;
+	line-height: 1;
+}
+
+
+#container {
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $altFontStack;
+}
+
+.bg-filter {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 99;
+	background-color: $color_bg_hero;
 }

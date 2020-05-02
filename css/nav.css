@@ -11,16 +11,23 @@
 /* END Sylvain */
 /* START Aesthetic */
 /* END Aesthetic */
+/* START light */
+/* END light */
+/* START dark */
+/* END dark */
+/* START Solar */
+/* END Solar */
 /* END Templates */
 /* START Nav Animations */
 /* END Nav Animations */
 /* START Font Stacks */
+/*$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /* END Font STacks */
 /* START Miscellaneous */
 /* END Miscellaneous */
 #nav-top {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 201;
   top: 0;
   animation-duration: 0.5s;
@@ -28,28 +35,30 @@
   height: 3em;
 }
 #nav-top ul li {
-  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: semplicitapro, urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #div-logo {
-  font-family: din-2014, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.75rem;
-  color: #f8e6d8;
+  font-family: semplicitapro, urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffd050;
   text-align: center;
-  padding: 0.25em;
   display: inline-block;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  padding: 0.25em 0.25em 0.25em 0.5em;
 }
 
 #container-div-nav-side {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  left: -100vw;
+  left: -100%;
   top: 0;
   z-index: 200;
   animation-duration: 0.5s;
@@ -59,13 +68,13 @@
 #div-nav-side {
   width: 80vw;
   height: 100vh;
-  background-color: #836aa4;
+  background-color: #604f4f;
   z-index: 202;
   position: absolute;
 }
 
 #div-nav-inactive {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 201;
   position: absolute;
@@ -97,66 +106,113 @@
   flex-wrap: wrap;
 }
 .list-categories li {
-  font-size: 1rem;
-  color: #f8e6d8;
+  font-size: 1.25rem;
+  color: #F0daba;
   width: 50%;
   text-align: center;
   padding: 2em 0;
 }
 
+#nav-bottom {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+}
+#nav-bottom #container-div-nav-bottom #div-nav-bottom {
+  padding-bottom: 1em;
+}
+#nav-bottom #container-div-nav-bottom #div-nav-bottom .list-categories {
+  width: initial;
+}
+#nav-bottom #container-div-nav-bottom #div-nav-bottom .list-categories li {
+  font-size: 1.5rem;
+}
+
 /*START Micro Mobile */
+@media (max-width: 320px) {
+  header #nav-top #container-div-nav-side #div-nav-side .list-categories li {
+    font-size: 1rem;
+  }
+
+  #nav-bottom #container-div-nav-bottom #div-nav-bottom .list-categories li {
+    font-size: 1rem;
+  }
+}
 /* END Micro Mobile */
 /*START Tablet */
 @media (min-width: 768px) and (min-height: 421px) {
-  #nav-top {
-    height: fit-content;
-  }
-
-  #div-btn-nav, #div-nav-inactive {
+  header #div-btn-nav, header #div-nav-inactive {
     display: none;
   }
-
-  #div-logo, #div-nav-side {
-    left: 10vw;
+  header #nav-top {
+    height: fit-content;
+    padding: 0 0 0.5em 0;
+  }
+  header #nav-top #div-logo {
+    font-size: 2rem;
+  }
+  header #nav-top #div-logo, header #nav-top #container-div-nav-side {
+    padding: 0.25em 0;
+  }
+  header #nav-top #div-logo, header #nav-top #div-nav-side {
+    left: 5%;
     transform: none;
     position: relative;
   }
-
-  #container-div-nav-side {
+  header #nav-top #container-div-nav-side {
     left: 0;
     animation-name: none !important;
-    width: 100vw;
+    width: 100%;
     height: initial;
     position: relative;
   }
-
-  #div-nav-side {
-    width: 80vw;
+  header #nav-top #container-div-nav-side #div-nav-side {
+    width: 90%;
     height: initial;
     background-color: transparent;
     position: relative;
+  }
+  header #nav-top #container-div-nav-side #div-nav-side .list-categories li {
+    font-size: 1.5rem;
+  }
+
+  #nav-bottom {
+    width: 90%;
+  }
+  #nav-bottom #container-div-nav-bottom #div-nav-bottom .list-categories li {
+    font-size: 1.5rem;
   }
 
   .list-categories li {
     width: initial;
     padding: 0 1em 0.25em 0;
   }
-
-  #div-logo, #container-div-nav-side {
-    padding: 0.25em 0;
-  }
 }
 /* END Tablet */
 /*START Laptop */
 @media (min-width: 1000px) and (min-height: 421px) {
-  #div-logo, #div-nav-side {
-    left: 15vw;
+  header #nav-top #div-logo {
+    font-size: 2.25rem;
+  }
+  header #nav-top #container-div-nav-side #div-nav-side {
+    width: 80%;
+  }
+  header #nav-top #div-logo, header #nav-top #div-nav-side {
+    left: 10%;
   }
 
-  #div-nav-side {
-    width: 70vw;
+  #nav-bottom {
+    width: 80%;
   }
-
+  #nav-bottom #container-div-nav-bottom #div-nav-bottom .list-categories li {
+    font-size: 1.5rem;
+  }
+}
+/* END Laptop */
+/*START Desktop */
+@media (min-width: 1200px) and (min-height: 421px) {
   #div-logo {
     font-size: 2.25rem;
   }
@@ -164,15 +220,8 @@
   .list-categories li {
     font-size: 1.25rem;
   }
-}
-/* END Laptop */
-/*START Desktop */
-@media (min-width: 1200px) and (min-height: 421px) {
-  #div-logo {
-    font-size: 2.75rem;
-  }
 
-  .list-categories li {
+  #nav-bottom #container-div-nav-bottom #div-nav-bottom .list-categories li {
     font-size: 1.5rem;
   }
 }

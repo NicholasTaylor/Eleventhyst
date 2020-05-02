@@ -1,48 +1,42 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 #div-content-footer {
-	width: 100vw;
+	width: 100%;
 	color: $color_text;
 	font-family: $altFontStack;
 }
 
-#nav-bottom, #div-copyright {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: $articleWidthMobile;
-	text-align: center;
-}
-
 #div-copyright {
-	font-size: 1rem;
+	@include sectionBottomDefault();
+	font-size: $sectionBottomMobile;
 }
 
-#div-nav-bottom {
-	.list-categories {
-		width: initial;
+/*START Micro Mobile */
+@media (max-width: 320px){
+	#div-copyright {
+		font-size: $sectionBottomMicro;
 	}
-	padding-bottom: 1em;
 }
-
+/*START Micro Mobile */
 
 /*START Tablet */
 @media (min-width: 768px) and (min-height: 421px){
-	#nav-bottom, #div-copyright {
+	#div-copyright {
 		width: $articleWidthTablet;
-	}	
+		font-size: $sectionBottomTablet;
+	}
+	footer {
+	    padding: 2em 0 3em 0;
+	}
 }
 /* END Tablet */
 
-
 /* START Laptop */
 @media (min-width: 1000px) and (min-height: 421px){
-	#nav-bottom, #div-copyright {
-		width: $articleWidthLaptop;
-	}	
-
 	#div-copyright {
-		font-size: 1.25rem;
+		width: $articleWidthLaptop;
+		font-size: $sectionBottomLaptop;
 	}
 }
 /* END Laptop */
@@ -50,7 +44,7 @@
 /* START Desktop */
 @media (min-width: 1200px) and (min-height: 421px){
 	#div-copyright {
-		font-size: 1.5rem;
+		font-size: $sectionBottomDesktop;
 	}	
 }
 /* END Desktop */

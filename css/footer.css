@@ -11,53 +11,59 @@
 /* END Sylvain */
 /* START Aesthetic */
 /* END Aesthetic */
+/* START light */
+/* END light */
+/* START dark */
+/* END dark */
+/* START Solar */
+/* END Solar */
 /* END Templates */
 /* START Nav Animations */
 /* END Nav Animations */
 /* START Font Stacks */
+/*$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /* END Font STacks */
 /* START Miscellaneous */
 /* END Miscellaneous */
 #div-content-footer {
-  width: 100vw;
-  color: #f8e6d8;
-  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#nav-bottom, #div-copyright {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90vw;
-  text-align: center;
+  width: 100%;
+  color: #F0daba;
+  font-family: semplicitapro, urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #div-copyright {
-  font-size: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-#div-nav-bottom {
-  padding-bottom: 1em;
+/*START Micro Mobile */
+@media (max-width: 320px) {
+  #div-copyright {
+    font-size: 1rem;
+  }
 }
-#div-nav-bottom .list-categories {
-  width: initial;
-}
-
+/*START Micro Mobile */
 /*START Tablet */
 @media (min-width: 768px) and (min-height: 421px) {
-  #nav-bottom, #div-copyright {
-    width: 80vw;
+  #div-copyright {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 2em 0 3em 0;
   }
 }
 /* END Tablet */
 /* START Laptop */
 @media (min-width: 1000px) and (min-height: 421px) {
-  #nav-bottom, #div-copyright {
-    width: 70vw;
-  }
-
   #div-copyright {
-    font-size: 1.25rem;
+    width: 80%;
+    font-size: 1.5rem;
   }
 }
 /* END Laptop */

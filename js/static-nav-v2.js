@@ -19,9 +19,9 @@ const navToggleSpecial = () => {
 }
 
 const navBgToggle = () => {
-	if (window.scrollY > 0 && (navDiv.style.animationName === 'navOff' || !(navDiv.style.animationName))){
+	if (window.scrollY > (window.innerHeight / 4) && (navDiv.style.animationName === 'navOff' || !(navDiv.style.animationName))){
 		navDiv.style.animationName = 'navOn';
-	} else if (window.scrollY ==- 0 && navDiv.style.animationName === 'navOn') {
+	} else if (window.scrollY <= (window.innerHeight / 4) && navDiv.style.animationName === 'navOn') {
 		navDiv.style.animationName = 'navOff';
 	}
 }

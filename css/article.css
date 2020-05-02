@@ -12,23 +12,20 @@
 /* END Sylvain */
 /* START Aesthetic */
 /* END Aesthetic */
+/* START light */
+/* END light */
+/* START dark */
+/* END dark */
+/* START Solar */
+/* END Solar */
 /* END Templates */
 /* START Nav Animations */
 /* END Nav Animations */
 /* START Font Stacks */
+/*$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /* END Font STacks */
 /* START Miscellaneous */
 /* END Miscellaneous */
-html, body {
-  font-size: 100%;
-  background-color: #49619f;
-}
-
-body {
-  font-family: neue-haas-unica, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1;
-}
-
 .fade-in-text {
   animation-duration: 0.25s;
   animation-fill-mode: forwards;
@@ -46,13 +43,8 @@ body {
   background-color: black;
 }
 
-#container {
-  width: 100vw;
-  position: relative;
-}
-
 .container-section {
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -63,36 +55,26 @@ body {
 }
 
 #section-main {
-  color: #f8e6d8;
   padding-bottom: 2em;
-}
-
-.bg-filter {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 99;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .container-section-content {
   left: 50%;
   transform: translateX(-50%);
-  width: 90vw;
+  width: 90%;
 }
 
 #div-content-hero {
-  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: semplicitapro, urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
   z-index: 100;
   bottom: 0;
-  color: #f8e6d8;
 }
 #div-content-hero h1 {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 #div-content-hero h2 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 #div-content-hero h3, #div-content-hero p {
   font-size: 1rem;
@@ -100,7 +82,7 @@ body {
 #div-content-hero .meta-category {
   padding: 0.5em;
   display: inline-block;
-  border: 1px solid #f8e6d8;
+  border: 1px solid #F0daba;
 }
 #div-content-hero time {
   font-size: 1.75rem;
@@ -133,7 +115,7 @@ body {
 }
 
 .img-content {
-  width: 90vw;
+  width: 90%;
 }
 .img-content img {
   height: auto;
@@ -161,25 +143,25 @@ body {
 }
 
 .img-content-cover {
-  width: 100vw;
+  width: 100%;
   transform: translateX(-50%);
   left: 50%;
   position: inherit;
 }
 .img-content-cover img {
   height: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 blockquote {
   margin: 0 0 1em;
   padding: 0 0 0 1em;
-  border-left: 1px dashed #f8e6d8;
+  border-left: 1px dashed #F0daba;
   font-size: 0.9rem;
 }
 
 p.pullquote {
-  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: semplicitapro, urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   padding: 7rem 0;
 }
@@ -204,14 +186,14 @@ p.pullquote:after {
 }
 
 code {
+  color: #F0daba;
   font-family: monotalic, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   font-weight: 700;
-  color: #f8e6d8;
   display: block;
   margin-bottom: 1em;
   line-height: 1.5;
   padding: 1em;
-  background-color: #836aa4;
+  background-color: #604f4f;
 }
 
 /*START Micro Mobile */
@@ -221,13 +203,35 @@ code {
   }
 
   #div-content-hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   #div-content-hero time, #div-content-hero h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+  #div-content-hero h3, #div-content-hero p {
+    font-size: 0.8rem;
   }
 
   .list-categories li {
+    font-size: 0.8rem;
+  }
+
+  #div-content-main h1, #div-content-main p.pullquote {
+    font-size: 1.75rem;
+  }
+  #div-content-main h2 {
+    font-size: 1.5rem;
+  }
+  #div-content-main h3 {
+    font-size: 1.25rem;
+  }
+  #div-content-main h4 {
+    font-size: 1.1rem;
+  }
+  #div-content-main h5 {
+    font-size: 1rem;
+  }
+  #div-content-main h6, #div-content-main p {
     font-size: 0.9rem;
   }
 }
@@ -235,18 +239,27 @@ code {
 /*START Tablet */
 @media (min-width: 768px) and (min-height: 421px) {
   .container-section-content, .img-content {
-    width: 80vw;
+    width: 90%;
   }
 
   #div-content-hero {
     width: 50vw;
+  }
+  #div-content-hero h1 {
+    font-size: 1.25rem;
+  }
+  #div-content-hero h2, #div-content-hero time {
+    font-size: 1.1rem;
+  }
+  #div-content-hero h3, #div-content-hero p {
+    font-size: 1rem;
   }
 
   #section-hero .pos-top-left {
     bottom: initial;
     top: 16%;
     text-align: left;
-    left: 10vw;
+    left: 5%;
     transform: none;
   }
   #section-hero .pos-top-center {
@@ -258,14 +271,14 @@ code {
     bottom: initial;
     top: 16%;
     text-align: right;
-    left: 90vw;
+    left: 95%;
     transform: translateX(-100%);
   }
   #section-hero .pos-middle-left {
     bottom: initial;
     top: 50%;
     text-align: left;
-    left: 10vw;
+    left: 5%;
     transform: translateY(-50%);
   }
   #section-hero .pos-middle-center {
@@ -279,12 +292,12 @@ code {
     bottom: initial;
     top: 50%;
     text-align: right;
-    left: 90vw;
+    left: 95%;
     transform: translate(-100%, -50%);
   }
   #section-hero .pos-bottom-left {
     text-align: left;
-    left: 10vw;
+    left: 5%;
     transform: none;
   }
   #section-hero .pos-bottom-center {
@@ -292,8 +305,31 @@ code {
   }
   #section-hero .pos-bottom-right {
     text-align: right;
-    left: 90vw;
+    left: 95%;
     transform: translateX(-100%);
+  }
+
+  #div-content-main h1, #div-content-main p.pullquote {
+    font-size: 2rem;
+  }
+  #div-content-main h2 {
+    font-size: 1.75rem;
+  }
+  #div-content-main h3 {
+    font-size: 1.5rem;
+  }
+  #div-content-main h4 {
+    font-size: 1.25rem;
+  }
+  #div-content-main h5 {
+    font-size: 1rem;
+  }
+  #div-content-main h6, #div-content-main p, #div-content-main code, #div-content-main li {
+    font-size: 1.1rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
   }
 }
 /* END Tablet */
@@ -303,62 +339,62 @@ code {
     min-height: 650px;
   }
   #section-hero .pos-top-left {
-    left: 15vw;
+    left: 10%;
   }
   #section-hero .pos-top-right {
-    left: 85vw;
+    left: 90%;
   }
   #section-hero .pos-middle-left {
-    left: 15vw;
+    left: 10%;
   }
   #section-hero .pos-middle-right {
-    left: 85vw;
+    left: 90%;
   }
   #section-hero .pos-bottom-left {
-    left: 15vw;
+    left: 10%;
   }
   #section-hero .pos-bottom-right {
-    left: 85vw;
+    left: 90%;
   }
 
   .container-section-content, .img-content {
-    width: 70vw;
+    width: 80%;
   }
 
   #div-content-hero {
     width: 40vw;
   }
   #div-content-hero h1 {
-    font-size: 1.75rem;
-  }
-  #div-content-hero h2, #div-content-hero time {
     font-size: 1.5rem;
   }
-  #div-content-hero h3, #div-content-hero p {
+  #div-content-hero h2, #div-content-hero time {
     font-size: 1.25rem;
+  }
+  #div-content-hero h3, #div-content-hero p {
+    font-size: 1.1rem;
   }
 
   #div-content-main h1, #div-content-main p.pullquote {
-    font-size: 2.5rem;
-  }
-  #div-content-main h2 {
-    font-size: 2.25rem;
-  }
-  #div-content-main h3 {
     font-size: 2rem;
   }
-  #div-content-main h4 {
+  #div-content-main h2 {
     font-size: 1.75rem;
   }
-  #div-content-main h5 {
+  #div-content-main h3 {
     font-size: 1.5rem;
   }
-  #div-content-main h6, #div-content-main p, #div-content-main code, #div-content-main li {
+  #div-content-main h4 {
     font-size: 1.25rem;
+  }
+  #div-content-main h5 {
+    font-size: 1.1rem;
+  }
+  #div-content-main h6, #div-content-main p, #div-content-main code, #div-content-main li {
+    font-size: 1rem;
   }
 
   blockquote {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 /* END Desktop */
@@ -372,39 +408,39 @@ code {
   }
 
   #div-content-hero {
-    width: 40vw;
+    width: 30vw;
   }
   #div-content-hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   #div-content-hero h2, #div-content-hero time {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #div-content-hero h3, #div-content-hero p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   #div-content-main h1, #div-content-main p.pullquote {
-    font-size: 3rem;
-  }
-  #div-content-main h2 {
-    font-size: 2.75rem;
-  }
-  #div-content-main h3 {
-    font-size: 2.5rem;
-  }
-  #div-content-main h4 {
     font-size: 2.25rem;
   }
-  #div-content-main h5 {
+  #div-content-main h2 {
     font-size: 2rem;
   }
-  #div-content-main h6, #div-content-main p, #div-content-main code, #div-content-main li {
+  #div-content-main h3 {
+    font-size: 1.75rem;
+  }
+  #div-content-main h4 {
     font-size: 1.5rem;
+  }
+  #div-content-main h5 {
+    font-size: 1.25rem;
+  }
+  #div-content-main h6, #div-content-main p, #div-content-main code, #div-content-main li {
+    font-size: 1.1rem;
   }
 
   blockquote {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 /* END Desktop */

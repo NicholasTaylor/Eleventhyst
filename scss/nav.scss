@@ -1,8 +1,9 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 #nav-top {
 	position: fixed;
-	width: 100vw;
+	width: 100%;
 	z-index: 201;
 	top: 0;
 	animation-duration: 0.5s;
@@ -15,23 +16,25 @@
 
 #div-logo {
     font-family: $logoFontStack;
-    font-weight: 400;
-    font-size: 1.75rem;
-    color: $color_text;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $color_text_deep;
     text-align: center;
-    padding: 0.25em;
     display: inline-block;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    padding: .25em .25em .25em .5em;
 }
 
 #container-div-nav-side {
 	position: fixed;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
-	left: -100vw;
+	left: -100%;
 	top: 0;
 	z-index: 200;
 	animation-duration: 0.5s;
@@ -47,7 +50,7 @@
 }
 
 #div-nav-inactive {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	z-index: 201;
 	position: absolute;
@@ -78,7 +81,7 @@
     width: 100%;
     flex-wrap: wrap;
     li {
-	    font-size: 1rem;
+	    font-size: 1.25rem;
 	    color: $color_text;
 	    width: 50%;
 	    text-align: center;
@@ -86,74 +89,145 @@
     }
 }
 
+#nav-bottom {
+	@include sectionBottomDefault();
+	#container-div-nav-bottom {
+		#div-nav-bottom {
+			padding-bottom: 1em;
+			.list-categories {
+				width: initial;
+				li {
+					font-size: $sectionBottomMobile;
+				}
+			}
+		}
+	}
+}
+
 
 /*START Micro Mobile */
 @media (max-width: 320px){
+	header {
+		#nav-top {
+			#container-div-nav-side {
+				#div-nav-side {
+					.list-categories {
+						li {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
 
+	#nav-bottom {
+		#container-div-nav-bottom {
+			#div-nav-bottom {
+				.list-categories {
+					li {
+						font-size: $sectionBottomMicro;
+					}
+				}
+			}
+		}
+	}
 }
 /* END Micro Mobile */
 
 
 /*START Tablet */
 @media (min-width: 768px) and (min-height: 421px){
-	#nav-top {
-		height: fit-content;
+	header {
+		#div-btn-nav, #div-nav-inactive {
+			display: none;
+		}
+		#nav-top {
+			height: fit-content;
+			padding: 0 0 .5em 0;
+			#div-logo {
+				font-size: 2rem;
+			}
+			#div-logo, #container-div-nav-side {
+				padding: 0.25em 0;
+			}
+			#div-logo, #div-nav-side {
+				left: (100% - $articleWidthTablet) / 2;
+				transform: none;
+				position: relative;
+			}
+			#container-div-nav-side {
+				left: 0;
+				animation-name: none !important;
+				width: 100%;
+				height: initial;
+				position: relative;
+				#div-nav-side {
+				    width: $articleWidthTablet;
+				    height: initial;
+				    background-color: transparent;
+				    position: relative;
+					.list-categories {
+						li {
+						    font-size: 1.5rem;
+						}
+					}
+				}
+			}
+		}
 	}
 
-	#div-btn-nav, #div-nav-inactive {
-		display: none;
-	}
-
-	#div-logo, #div-nav-side {
-		left: (100vw - $articleWidthTablet) / 2;
-		transform: none;
-		position: relative;
-	}
-
-	#container-div-nav-side {
-	    left: 0;
-	    animation-name: none !important;
-	    width: 100vw;
-	    height: initial;
-	    position: relative;
-}
-
-	#div-nav-side {
-	    width: $articleWidthTablet;
-	    height: initial;
-	    background-color: transparent;
-	    position: relative;
+	#nav-bottom {
+		width: $articleWidthTablet;
+		#container-div-nav-bottom {
+			#div-nav-bottom {
+				.list-categories {
+					li {
+						font-size: $sectionBottomTablet;
+					}
+				}
+			}
+		}
 	}
 
 	.list-categories li {
-	    width: initial;
-	    padding: 0 1em .25em 0;
+		@include listCategoriesTablet();
 	}
 
-	#div-logo, #container-div-nav-side {
-		padding: 0.25em 0;
-	}
-	
 }
 /* END Tablet */
 
 
 /*START Laptop */
 @media (min-width: 1000px) and (min-height: 421px){
-	#div-logo, #div-nav-side {
-		left: (100vw - $articleWidthLaptop) / 2;
+	header {
+		#nav-top {
+			#div-logo {
+				font-size: 2.25rem;
+			}
+			#container-div-nav-side {
+				#div-nav-side {
+					width: $articleWidthLaptop;
+				}
+			}
+			#div-logo, #div-nav-side {
+				left: (100% - $articleWidthLaptop) / 2;
+			}
+		}
 	}
 
-	#div-nav-side {
+	#nav-bottom {
 		width: $articleWidthLaptop;
-	}
+		#container-div-nav-bottom {
+			#div-nav-bottom {
+				.list-categories {
+					li {
+						font-size: $sectionBottomLaptop;
+					}
+				}
+			}
+		}
 
-	#div-logo {
-		font-size: 2.25rem;
-	}
-
-	.list-categories li {
-	    font-size: 1.25rem;
 	}
 }
 /* END Laptop */
@@ -162,11 +236,23 @@
 /*START Desktop */
 @media (min-width: 1200px) and (min-height: 421px){
 	#div-logo {
-		font-size: 2.75rem;
+		font-size: 2.25rem;
 	}
 
 	.list-categories li {
-	    font-size: 1.5rem;
+	    font-size: 1.25rem;
+	}
+
+	#nav-bottom {
+		#container-div-nav-bottom {
+			#div-nav-bottom {
+				.list-categories {
+					li {
+						font-size: $sectionBottomDesktop;
+					}
+				}
+			}
+		}
 	}
 }
 /* END Desktop */

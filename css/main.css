@@ -11,15 +11,47 @@
 /* END Sylvain */
 /* START Aesthetic */
 /* END Aesthetic */
+/* START light */
+/* END light */
+/* START dark */
+/* END dark */
+/* START Solar */
+/* END Solar */
 /* END Templates */
 /* START Nav Animations */
 /* END Nav Animations */
 /* START Font Stacks */
+/*$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /* END Font STacks */
 /* START Miscellaneous */
 /* END Miscellaneous */
+html, body {
+  font-size: 100%;
+  background-color: #303030;
+  color: #F0daba;
+}
+
+body {
+  font-family: pragmatica, neue-haas-unica, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+}
+
+#container {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: semplicitapro, urbane-rounded, circe-rounded, Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bg-filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  background-color: #0000004d;
 }
 
 /*# sourceMappingURL=main.css.map */

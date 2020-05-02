@@ -1,45 +1,55 @@
+@use "sass:map";
+
 /* START Templates */
+
+
 /* START Campfire */
-$campfire_color_bg_main: #073569;
-$campfire_color_bg_nav: #0B4376;
-$campfire_color_misc: #4C7A9E;
-$campfire_color_text: #F49F8B;
+$campfire: ("color_bg_main": #073569,"color_bg_nav": #0B4376,"color_misc": #4C7A9E,"color_text": #F49F8B);
 /* END Campfire */
 
 /* START Snow */
-$snow_color_bg_main: #8EB2EE;
-$snow_color_bg_nav: #BC9FBB;
-$snow_color_misc: #ED739A;
-$snow_color_text: #EBE5F1;
+$snow: ("color_bg_main": #8EB2EE,"color_bg_nav": #BC9FBB,"color_misc": #ED739A,"color_text": #EBE5F1);
 /* END Snow */
 
 /* START Aqua */
-$aqua_color_bg_main: #2D2942;
-$aqua_color_bg_nav: #0C7C92;
-$aqua_color_misc: #60C3E0;
-$aqua_color_text: #AFD6DD;
+$aqua: ("color_bg_main": #2D2942,"color_bg_nav": #0C7C92,"color_misc": #60C3E0,"color_text": #AFD6DD);
 /* END Aqua */
 
 /* START Aqua 2 */
-$aqua2_color_bg_main: #39A3CA;
-$aqua2_color_bg_nav: #379AB7;
-$aqua2_color_misc: #60C3E0;
-$aqua2_color_text: #D6EBF0;
+$aqua2: ("color_bg_main": #39A3CA,"color_bg_nav": #379AB7,"color_misc": #60C3E0,"color_text": #D6EBF0);
 /* END Aqua 2 */
 
 /* START Sylvain */
-$sylvain_color_bg_main: #259599;
-$sylvain_color_bg_nav: #09A598;
-$sylvain_color_misc: #5FD37E;
-$sylvain_color_text: #7DE6D7;
+$sylvain: ("color_bg_main": #259599,"color_bg_nav": #09A598,"color_misc": #5FD37E,"color_text": #7DE6D7);
 /* END Sylvain */
 
 /* START Aesthetic */
-$color_bg_main: #49619f;
-$color_bg_nav: #836aa4;
-$color_misc: #f597af;
-$color_text: #f8e6d8;
+$aesthetic: ("color_bg_main": #49619f,"color_bg_nav": #836aa4,"color_misc": #f597af,"color_text": #f8e6d8);
 /* END Aesthetic */
+
+/* START light */
+$light: ("color_bg_main": #e0e0e0, "color_bg_nav": #ffffff, "color_bg_hero": #0000004d, "color_misc": #f597af, "color_text": #666666, "color_text_deep": #202020, "color_text_hero": #e0e0e0, "color_text_hero_deep": #ffffff);
+/* END light */
+
+/* START dark */
+$dark: ("color_bg_main": #202020, "color_bg_nav": #3b3b3b, "color_bg_hero": #0000004d, "color_misc": #f597af, "color_text": #e0e0e0, "color_text_deep": #ffffff, "color_text_hero": #e0e0e0, "color_text_hero_deep": #ffffff);
+/* END dark */
+
+/* START Solar */
+$solar: ("color_bg_main": #303030, "color_bg_nav": #604f4f, "color_bg_hero": #0000004d, "color_misc": #ffffff, "color_text": #F0daba, "color_text_deep": #ffd050, "color_text_hero": #F0daba, "color_text_hero_deep": #ffd050);
+/* END Solar */
+
+$activeTemplate: $solar;
+$color_bg_main: map.get($activeTemplate, "color_bg_main");
+$color_bg_nav: map.get($activeTemplate, "color_bg_nav");
+$color_bg_hero: map.get($activeTemplate, "color_bg_hero");
+$color_misc: map.get($activeTemplate, "color_misc");
+$color_text: map.get($activeTemplate, "color_text");
+$color_text_deep: map.get($activeTemplate, "color_text_deep");
+$color_text_hero: map.get($activeTemplate, "color_text_hero");
+$color_text_hero_deep: map.get($activeTemplate, "color_text_hero_deep");
+
+
 /* END Templates */
 
 /* START Nav Animations */
@@ -50,16 +60,22 @@ $sideNavOff: -100vw;
 /* END Nav Animations */
 
 /* START Font Stacks */
-$mainFontStack: neue-haas-unica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$altFontStack: urbane-rounded, circe-rounded, Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$mainFontStack: pragmatica, neue-haas-unica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$altFontStack: semplicitapro, urbane-rounded, circe-rounded, Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$logoFontStack: semplicitapro, urbane-rounded, circe-rounded, Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 $monoFontStack: monotalic, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 /* END Font STacks */
 
 
 /* START Miscellaneous */
-$articleWidthMobile: 90vw;
-$articleWidthTablet: 80vw;
-$articleWidthLaptop: 70vw;
-$articleWidthDesktop: 50vw;
+$articleWidthMobile: 90%;
+$articleWidthTablet: 90%;
+$articleWidthLaptop: 80%;
+$articleWidthDesktop: 50%;
+$sectionBottomMicro: 1rem;
+$sectionBottomMobile: 1.5rem;
+$sectionBottomTablet: 1.5rem;
+$sectionBottomLaptop: 1.5rem;
+$sectionBottomDesktop: 1.5rem;
 /* END Miscellaneous */

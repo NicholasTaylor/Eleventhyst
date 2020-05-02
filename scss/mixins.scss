@@ -5,3 +5,26 @@
     position: absolute;
     opacity: 0.75;
 }
+
+@mixin fullscreenBG(){
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin posCentered(){
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin sectionBottomDefault(){
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: $articleWidthMobile;
+	text-align: center;
+}
+
+@mixin listCategoriesTablet(){
+	width: initial;
+	padding: 0 1em .25em 0;
+}
