@@ -9,201 +9,182 @@ article {
 	position: relative;
 	@include posCentered();
 	@include fullscreenBG();
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding: 0 0 0.25em 0;
+		margin: 0;
+		line-height: 1;
+	}
+	h1 {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	h2 {
+		display: inline-block;
+		font-weight: 400;
+		margin: 0 .1em;
+	}
+	h3 {
+		display: inline-block;
+		font-weight: 100;
+		margin: 0 .1em;
+	}
+	button {
+			background-color: transparent;
+			color: $color_text_hero_deep;
+			border-color: $color_text_hero_deep;
+			padding: .5em .75em;
+			text-transform: uppercase;
+			border-radius: .5em;
+			margin: .5em 0 0 0;
+			letter-spacing: .1em;
+			font-weight: 700;
+			transition: .5s;
+	}
+	button:hover {
+		color: $color_bg_main;
+		background-color: $color_text_hero_deep;
+	}
 	.div-content {
 		font-family: $altFontStack;
 		z-index: 100;
-		h1, h2, h3, h4, h5, h6 {
-			padding: 0 0 0.25em 0;
-			margin: 0;
-			line-height: 1;
-		}
-		h1 {
-			font-weight: 700;
-			text-transform: uppercase;
-		}
 		.div-meta {
 		    border-top: 1px solid $color_text_deep;
 		    padding: .5em 0 0 0;
-		    .div-meta-h2 {
-				h2 {
-					display: inline-block;
-					font-weight: 400;
-					margin: 0 .1em;
-				}
-			}
-			.div-meta-h3 {
-				h3 {
-					display: inline-block;
-					font-weight: 100;
-					margin: 0 .1em;
-				}
+		}
+	}
+}
+
+#section-hero {
+	.container-article {
+		color: $color_text_hero;
+		a,
+		a:visited,
+		a:hover,
+		a:active {
+			color: $color_text_hero;
+			text-decoration: none;
+		};
+		z-index: 100;
+		width: 100%;
+		height: 100vh;
+		h1 {
+			font-size: 2rem;
+			color: $color_text_hero_deep;
+			a {
+				color: $color_text_hero_deep;
 			}
 		}
-		.div-cta {
-			button {
-			    background-color: transparent;
-			    color: $color_text_hero_deep;
-			    border-color: $color_text_hero_deep;
-			    padding: .5em .75em;
-			    text-transform: uppercase;
-			    border-radius: .5em;
-			    margin: .5em 0 0 0;
-			    letter-spacing: .1em;
-			    font-weight: 700;
-			    transition: .5s;
-			}
-			button:hover {
-				color: $color_bg_main;
-				background-color: $color_text_hero_deep;
+		h2 {
+			font-size: 1rem;
+		}
+		h3 {
+			font-size: .8rem;
+		}
+		button {
+			font-size: 1.5rem;
+		}
+		.div-content {
+			position: absolute;
+			width: 90vw;
+			text-align: center;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			.div-meta {
+				display: inline-block;
 			}
 		}
 	}
 }
 
-#container {
-	#section-primary {
-		article {
-			color: $color_text_hero;
-			a, 
-			a:visited, 
-			a:active {
-				color: $color_text_hero;
-			} 
-			a:visited,
-			a:hover, 
-			a:active {
-				text-decoration: none;
-			};
-			z-index: 100;
-			width: 100%;
-			height: 100vh;
-			.div-content {
-				position: absolute;
-				width: 90vw;
-				text-align: center;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%,-50%);
-				.div-meta {
-					display: inline-block;
-				}
-				.div-cta {
-					button {
-						font-size: 1.5rem;
-					}
-				}
-				h1 {
-					font-size: 2rem;
-					color: $color_text_hero_deep;
-					a {
-						color: $color_text_hero_deep;
-					}
-				}
-				h2 {
-					font-size: 1rem;
-				}
-				h3 {
-					font-size: .8rem;
-				}
-			}
-		}
-	}
-
-	#section-header-stories {
-	    width: 100%;
-	    text-align: center;
-	    #div-header-stories {
+#section-header-stories {
+    width: 100%;
+    text-align: center;
+    #div-header-stories {
 			margin: .5em auto;
-		    font-family: $altFontStack;
-		    text-transform: uppercase;
-		    font-weight: 700;
-		    font-size: 2rem;
-		    border-bottom: 5px outset $color_text_hero_deep;
-		    display: inline-block;
-		    padding: .5em 0 .5em .25em;
-		    width: 65%;
-		    letter-spacing: .25em;
-	    }
-	    
-	}
+	    font-family: $altFontStack;
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    font-size: 2rem;
+	    border-bottom: 5px outset $color_text_hero_deep;
+	    display: inline-block;
+	    padding: .5em 0 .5em .25em;
+	    width: 65%;
+	    letter-spacing: .25em;
+    }
 
-	#section-secondary, #section-tertiary {
-		article {
-			width: $articleWidthMobile;
-			margin: 1em 0;
-			.div-content-img {
-			    width: 100%;
-			    height: 12em;
-			    border-radius: 1em 1em 0 0;
-			    background-size: cover;
-			    background-position: center;
-			}
-			.div-content {
-				padding: 1em 5vw;
-				background-color: $color_bg_nav;
-				border-radius: 0 0 1em 1em;
-				h1 {
-					color: $color_text_deep;
-					font-size: 1.75rem;
-				}
-				h2 {
-					font-size: 1rem;
-				}
-				h3 {
-					font-size: .8rem;
-				}
-				.div-cta {
-					button {
-						font-size: 1.25rem;
-					}
-				}
-			}
+}
+
+#section-secondary,
+#section-tertiary {
+	.container-article {
+		h1 {
+			color: $color_text_deep;
+			font-size: 1.75rem;
+		}
+		h2 {
+			font-size: 1rem;
+		}
+		h3 {
+			font-size: .8rem;
+		}
+		button {
+			font-size: 1.25rem;
+		}
+		width: $articleWidthMobile;
+		margin: 1em 0;
+		.div-content-img {
+		    width: 100%;
+		    height: 12em;
+		    border-radius: 1em 1em 0 0;
+		    background-size: cover;
+		    background-position: center;
+		}
+		.div-content {
+			padding: 1em 5vw;
+			background-color: $color_bg_nav;
+			border-radius: 0 0 1em 1em;
 		}
 	}
 }
 
 /*START Micro Mobile */
 @media (max-width: 320px), (max-height: 320px){
-	#container {
-		#section-primary {
-			article {
-				.div-content {
-					h1 {
-						font-size: 1.5rem;
-					}
-					h2 {
-						font-size: .8rem;
-					}
-					h3 {
-						font-size: .8rem;
-					}
-					.div-cta {
-						button {
-							font-size: 1.25rem;
-						}
-					}
-
-				}
+	#section-hero {
+		.container-article {
+			h1 {
+				font-size: 1.5rem;
+			}
+			h2 {
+				font-size: .8rem;
+			}
+			h3 {
+				font-size: .8rem;
+			}
+			button {
+				font-size: 1.25rem;
 			}
 		}
-		#section-secondary, #section-tertiary {
-			article {
-				.div-content {
-					h1 {
-						font-size: 1.1rem;
-					}
-					h2 {
-						font-size: .8rem;
-					}
-					h3 {
-						font-size: .8rem;
-					}
-					.div-cta {
-						button {
-							font-size: 1.25rem;
-						}
-					}
-				}
+	}
+	#section-secondary,
+	#section-tertiary {
+		.container-article {
+			h1 {
+				font-size: 1.1rem;
+			}
+			h2 {
+				font-size: .8rem;
+			}
+			h3 {
+				font-size: .8rem;
+			}
+			button {
+				font-size: 1.25rem;
 			}
 		}
 	}
@@ -211,100 +192,89 @@ article {
 
 /* START Tablet */
 @media (min-width: 768px) and (min-height: 421px){
-	article {
+	.container-article {
 		position: relative;
 		transform: none;
 		left: initial;
 	}
-	#container {
-		#section-primary {
-			article {
-				.div-content {
-					width: $articleWidthTablet;
-					h1 {
-						font-size: 3rem;
-					}
-					h2 {
-						font-size: 1.5rem;
-					}
-					h3 {
-						font-size: 1.25rem;
-					}
-					.div-cta {
-						button {
-							font-size: 1.75rem;
-						}
-					}
-				}
-			}
-		}
-
-		#section-header-stories {
-			#div-header-stories {
-				width: 50%;
+	#section-hero {
+		.container-article {
+			h1 {
 				font-size: 3rem;
 			}
-		}
-
-
-		#section-secondary, #section-tertiary {
-			width: $articleWidthTablet;
-			@include posCentered();
-		    display: flex;
-		    flex-direction: row;
-		    flex-wrap: wrap;
-		    justify-content: space-between;
-			article {
-				.div-content {
-					padding: 1em;
-				}
+			h2 {
+				font-size: 1.5rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
+			button {
+				font-size: 1.75rem;
+			}
+			.div-content {
+				width: $articleWidthTablet;
 			}
 		}
+	}
 
-		#section-secondary {
-			article {
-				width: 100%;
-				.div-content {
-					h1 {
-						font-size: 2.5rem;
-					}
-					h2 {
-						font-size: 1.5rem;
-					}
-					h3 {
-						font-size: 1rem;
-					}
-					.div-cta {
-						button {
-							font-size: 1.75rem;
-						}
-					}
-				}
+	#section-header-stories {
+		#div-header-stories {
+			width: 50%;
+			font-size: 3rem;
+		}
+	}
+
+
+	#section-secondary,
+	#section-tertiary {
+		width: $articleWidthTablet;
+		@include posCentered();
+	    display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+		.container-article {
+			.div-content {
+				padding: 1em;
 			}
 		}
+	}
 
-		#section-tertiary {
-			article {
-				width: calc(50% - .75em);
-				margin: .75em 0;
-				.div-content {
-					h1 {
-						font-size: 1.75rem;
-					}
-					h2 {
-						font-size: 1.25rem;
-					}
-					h3 {
-						font-size: 1rem;
-					}
-					.div-cta {
-						button {
-							font-size: 1.5rem;
-						}
-					}
-				}
+	#section-secondary {
+		.container-article {
+			width: 100%;
+			h1 {
+				font-size: 2.5rem;
 			}
-		}	
+			h2 {
+				font-size: 1.5rem;
+			}
+			h3 {
+				font-size: 1rem;
+			}
+			button {
+				font-size: 1.75rem;
+			}
+		}
+	}
+
+	#section-tertiary {
+		.container-article {
+			width: calc(50% - .75em);
+			margin: .75em 0;
+			h1 {
+				font-size: 1.75rem;
+			}
+			h2 {
+				font-size: 1.25rem;
+			}
+			h3 {
+				font-size: 1rem;
+			}
+			button {
+				font-size: 1.5rem;
+			}
+		}
 	}
 }
 /* END Tablet */
@@ -312,78 +282,77 @@ article {
 
 /*START Laptop */
 @media (min-width: 1000px) and (min-height: 421px){
-	#container {
-		#section-primary {
-			article {
-				.div-content {
-					width: $articleWidthLaptop;
-					h1 {
-						font-size: 3rem;
-					}
-					h2 {
-						font-size: 1.5rem;
-					}
-					h3 {
-						font-size: 1.25rem;
-					}
-				}
+	#section-hero {
+		.container-article {
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
+			.div-content {
+				width: $articleWidthLaptop;
 			}
 		}
-		#section-secondary, #section-tertiary {
-			width: $articleWidthLaptop;
-			article {
-				margin: 1.5em 0;
+	}
+	#section-secondary,
+	#section-tertiary {
+		width: $articleWidthLaptop;
+		.container-article {
+			margin: 1.5em 0;
+		}
+	}
+	#section-secondary {
+		width: $articleWidthLaptop;
+		.container-article {
+			width: 100%;
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
+			.div-content-img {
+				height: 24em;
+			}
+			.div-content {
+				padding: 2em;
+			    vertical-align: top;
 			}
 		}
-		#section-secondary {
-			width: $articleWidthLaptop;
-			article {
-				width: 100%;
-				.div-content-img {
-					height: 24em;
-				}
-				.div-content {
-					padding: 2em;
-				    vertical-align: top;
-					h1 {
-						font-size: 3rem;
-					}
-					h2 {
-						font-size: 1.5rem;
-					}
-					h3 {
-						font-size: 1.25rem;
-					}
-				}
+	}
+	#section-tertiary {
+		width: $articleWidthLaptop;
+		.container-article {
+			h1 {
+				font-size: 2rem;
+			}
+			h2 {
+				font-size: 1.25rem;
+			}
+			h3 {
+				font-size: 1rem;
+			}
+			width: calc(50% - 1.5em);
+			.div-content-img {
+				height: 12em;
+			}
+			.div-content {
+				padding: 2em;
+			    vertical-align: top;
 			}
 		}
-		#section-tertiary {
-			width: $articleWidthLaptop;
-			article {
-				width: calc(50% - 1.5em);
-				.div-content-img {
-					height: 12em;
-				}
-				.div-content {
-					padding: 2em;
-				    vertical-align: top;
-					h1 {
-						font-size: 2rem;
-					}
-					h2 {
-						font-size: 1.25rem;
-					}
-					h3 {
-						font-size: 1rem;
-					}
-				}
-			}
-		}
-		#section-header-stories {
-			#div-header-stories {
-		    	width: 50%;
-		    	font-size: 3rem;
-			}
+	}
+	#section-header-stories {
+		#div-header-stories {
+	    	width: 50%;
+	    	font-size: 3rem;
 		}
 	}
 }
@@ -392,30 +361,27 @@ article {
 
 /*START Desktop */
 @media (min-width: 1200px) and (min-height: 421px){
-	#container {
-		#section-primary {
-			article {
-				.div-content {
-					width: $articleWidthDesktop;
-					h1 {
-						font-size: 3rem;
-					}
-					h2 {
-						font-size: 2rem;
-					}
-					h3 {
-						font-size: 1.25rem;
-					}
-					.div-cta {
-						button {
-							font-size: 2rem;
-						}
-					}
-				}
+	#section-hero {
+		.container-article {
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 2rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
+			button {
+				font-size: 2rem;
+			}
+			.div-content {
+				width: $articleWidthDesktop;
 			}
 		}
-		#section-secondary, #section-tertiary {
-			width: $articleWidthDesktop;
-		}
-	}	
+	}
+	#section-secondary,
+	#section-tertiary {
+		width: $articleWidthDesktop;
+	}
 }
