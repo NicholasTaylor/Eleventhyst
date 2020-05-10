@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 html, body {
 	font-size: 100%;
@@ -37,28 +38,83 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: $color_bg_hero;
 }
 
-#section-hero {
+.section-intro {
+	position: relative;
+	@include posCentered();
+	@include fullscreenBG();
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding: 0 0 0.25em 0;
+		margin: 0;
+		line-height: 1;
+	}
 	h1 {
-		font-size: 2rem;
-		color: $color_text_hero_deep;
-		a {
-			color: $color_text_hero_deep;
-		}
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 	h2 {
-		font-size: 1rem;
+		display: inline-block;
+		font-weight: 400;
+		margin: 0 .1em;
 	}
 	h3 {
-		font-size: .8rem;
+		display: inline-block;
+		font-weight: 100;
+		margin: 0 .1em;
 	}
 	button {
-		font-size: 1.5rem;
+			background-color: transparent;
+			color: $color_text_hero_deep;
+			border-color: $color_text_hero_deep;
+			padding: .5em .75em;
+			text-transform: uppercase;
+			border-radius: .5em;
+			margin: .5em 0 0 0;
+			letter-spacing: .1em;
+			font-weight: 700;
+			transition: .5s;
 	}
-	.container-article {
+	button:hover {
+		color: $color_bg_main;
+		background-color: $color_text_hero_deep;
+	}
+	.div-content {
+		font-family: $altFontStack;
+		z-index: 100;
+		.div-meta {
+		    border-top: 1px solid $color_text_deep;
+		    padding: .5em 0 0 0;
+		}
+	}
+}
+
+.article-top {
+	.section-intro {
 		color: $color_text_hero;
 		z-index: 100;
 		width: 100%;
 		height: 100vh;
+		@include fullscreenBG();
+		h1 {
+			font-size: 2rem;
+			color: $color_text_hero_deep;
+			a {
+				color: $color_text_hero_deep;
+			}
+		}
+		h2 {
+			font-size: 1rem;
+		}
+		h3 {
+			font-size: .8rem;
+		}
+		button {
+			font-size: 1.5rem;
+		}
 		.div-content-video{
 			z-index: 90;
 			width: 100%;
@@ -88,38 +144,40 @@ h1, h2, h3, h4, h5, h6 {
 
 /*START Micro Mobile */
 @media (max-width: 320px), (max-height: 320px){
-	#section-hero {
-		h1 {
-			font-size: 1.5rem;
-		}
-		h2 {
-			font-size: .8rem;
-		}
-		h3 {
-			font-size: .8rem;
-		}
-		button {
-			font-size: 1.25rem;
+	.article-top {
+		.section-intro {
+			h1 {
+				font-size: 1.5rem;
+			}
+			h2 {
+				font-size: .8rem;
+			}
+			h3 {
+				font-size: .8rem;
+			}
+			button {
+				font-size: 1.25rem;
+			}
 		}
 	}
 }
 
 /* START Tablet */
 @media (min-width: 768px) and (min-height: 421px){
-	#section-hero {
-		h1 {
-			font-size: 3rem;
-		}
-		h2 {
-			font-size: 1.5rem;
-		}
-		h3 {
-			font-size: 1.25rem;
-		}
-		button {
-			font-size: 1.75rem;
-		}
-		.container-article {
+	.article-top {
+		.section-intro {
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
+			button {
+				font-size: 1.75rem;
+			}
 			.div-content {
 				width: $articleWidthTablet;
 			}
@@ -130,17 +188,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* START Laptop */
 @media (min-width: 1000px) and (min-height: 421px){
-	#section-hero {
-		h1 {
-			font-size: 3rem;
-		}
-		h2 {
-			font-size: 1.5rem;
-		}
-		h3 {
-			font-size: 1.25rem;
-		}
-		.container-article {
+	.article-top {
+		.section-intro {
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
 			.div-content {
 				width: $articleWidthLaptop;
 			}
@@ -151,20 +209,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* START Desktop */
 @media (min-width: 1200px) and (min-height: 421px){
-	#section-hero {
-		h1 {
-			font-size: 3rem;
-		}
-		h2 {
-			font-size: 2rem;
-		}
-		h3 {
-			font-size: 1.25rem;
-		}
-		button {
-			font-size: 2rem;
-		}
-		.container-article {
+	.article-top {
+		.section-intro {
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 2rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+			}
+			button {
+				font-size: 2rem;
+			}
 			.div-content {
 				width: $articleWidthDesktop;
 			}

@@ -190,10 +190,14 @@
 		}
 	}
 
-	.list-categories li {
-		@include listCategoriesTablet();
+	.list-categories {
+		li {
+			@include listCategoriesTablet();
+		}
+		.list-categories li:last-child {
+			padding: 0 1em 0 0;
+		}
 	}
-
 }
 /* END Tablet */
 

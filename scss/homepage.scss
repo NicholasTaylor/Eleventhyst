@@ -5,60 +5,6 @@ section {
 	position: relative;
 }
 
-article {
-	position: relative;
-	@include posCentered();
-	@include fullscreenBG();
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		padding: 0 0 0.25em 0;
-		margin: 0;
-		line-height: 1;
-	}
-	h1 {
-		font-weight: 700;
-		text-transform: uppercase;
-	}
-	h2 {
-		display: inline-block;
-		font-weight: 400;
-		margin: 0 .1em;
-	}
-	h3 {
-		display: inline-block;
-		font-weight: 100;
-		margin: 0 .1em;
-	}
-	button {
-			background-color: transparent;
-			color: $color_text_hero_deep;
-			border-color: $color_text_hero_deep;
-			padding: .5em .75em;
-			text-transform: uppercase;
-			border-radius: .5em;
-			margin: .5em 0 0 0;
-			letter-spacing: .1em;
-			font-weight: 700;
-			transition: .5s;
-	}
-	button:hover {
-		color: $color_bg_main;
-		background-color: $color_text_hero_deep;
-	}
-	.div-content {
-		font-family: $altFontStack;
-		z-index: 100;
-		.div-meta {
-		    border-top: 1px solid $color_text_deep;
-		    padding: .5em 0 0 0;
-		}
-	}
-}
-
 #section-header-stories {
     width: 100%;
     text-align: center;
@@ -92,7 +38,7 @@ article {
 	button {
 		font-size: 1.25rem;
 	}
-	.container-article {
+	.section-intro {
 		width: $articleWidthMobile;
 		margin: 1em 0;
 		.div-content-asset {
@@ -143,7 +89,7 @@ article {
 
 /* START Tablet */
 @media (min-width: 768px) and (min-height: 421px){
-	.container-article {
+	.section-intro {
 		position: relative;
 		transform: none;
 		left: initial;
@@ -165,7 +111,8 @@ article {
 	    flex-direction: row;
 	    flex-wrap: wrap;
 	    justify-content: space-between;
-		.container-article {
+		.section-intro {
+			width: 100%;
 			.div-content {
 				padding: 1em;
 			}
@@ -185,7 +132,7 @@ article {
 		button {
 			font-size: 1.75rem;
 		}
-		.container-article {
+		.article-flex {
 			width: 100%;
 		}
 	}
@@ -203,7 +150,7 @@ article {
 		button {
 			font-size: 1.5rem;
 		}
-		.container-article {
+		.article-flex {
 			width: calc(50% - .75em);
 			margin: .75em 0;
 		}
@@ -217,7 +164,7 @@ article {
 	#section-secondary,
 	#section-tertiary {
 		width: $articleWidthLaptop;
-		.container-article {
+		.section-intro {
 			margin: 1.5em 0;
 		}
 	}
@@ -232,8 +179,10 @@ article {
 		h3 {
 			font-size: 1.25rem;
 		}
-		.container-article {
+		.article-flex {
 			width: 100%;
+		}
+		.section-intro {
 			.div-content-asset {
 				height: 24em;
 			}
@@ -254,8 +203,10 @@ article {
 		h3 {
 			font-size: 1rem;
 		}
-		.container-article {
+		.article-flex {
 			width: calc(50% - 1.5em);
+		}
+		.section-intro {
 			.div-content-asset {
 				height: 12em;
 			}
