@@ -1,5 +1,5 @@
-@import "variables.scss";
-@import "mixins.scss";
+@import "variables-old.scss";
+@import "mixins-old.scss";
 
 #div-content-footer {
 	width: 100%;
@@ -45,6 +45,6 @@
 @media (min-width: 1200px) and (min-height: 421px){
 	#div-copyright {
 		font-size: $sectionBottomDesktop;
-	}	
+	}
 }
 /* END Desktop */
