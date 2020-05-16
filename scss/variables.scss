@@ -1,0 +1,27 @@
+@use "sass:map";
+
+/* START Font Stacks */
+$mainFontStack: pragmatica, neue-haas-unica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$altFontStack: semplicitapro, urbane-rounded, circe-rounded, Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$logoFontStack: semplicitapro, urbane-rounded, circe-rounded, Futura, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*$logoFontStack: din-2014, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+$monoFontStack: monotalic, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+/* END Font STacks */
+
+/* START Templates */
+/* START Solar */
+$solar: ("color_bg_main": #303030, "color_bg_nav": #604f4f, "color_bg_hero": #0000004d, "color_misc": #ffffff, "color_text": #F0daba, "color_text_deep": #ffd050, "color_text_hero": #F0daba, "color_text_hero_deep": #ffd050);
+/* END Solar */
+
+$activeTemplate: $solar;
+$color_bg_main: map.get($activeTemplate, "color_bg_main");
+$color_bg_nav: map.get($activeTemplate, "color_bg_nav");
+$color_bg_hero: map.get($activeTemplate, "color_bg_hero");
+$color_misc: map.get($activeTemplate, "color_misc");
+$color_text: map.get($activeTemplate, "color_text");
+$color_text_deep: map.get($activeTemplate, "color_text_deep");
+$color_text_hero: map.get($activeTemplate, "color_text_hero");
+$color_text_hero_deep: map.get($activeTemplate, "color_text_hero_deep");
+
+
+/* END Templates */
