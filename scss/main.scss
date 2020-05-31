@@ -2,6 +2,8 @@
 
 html, body {
   font-size: 100%;
+  background-color: $color_bg_main;
+  color: $color_text;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,22 +15,103 @@ a:visited,
 a:active,
 a:hover {
   color: $color_text_hero;
+  text-decoration: none;
 }
 
-/* Component - Primary Article Intro: Start */
+
+/* Component - Secondary, Tertiary Articles: Start */
 article {
+  width: 90%;
+  margin: 1em auto;
+  video.bg-header-video,
+  .bg-header-img {
+    z-index: 100;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 12em;
+    display: block;
+    border-radius: 1em 1em 0 0;
+    background-size: cover;
+    background-position: center center;
+  }
+  .header-article {
+    color: $color_text_hero;
+    line-height: 1;
+    border-radius: 0 0 1em 1em;
+    background-color: $color_bg_nav;
+    padding: 1em 5vw;
+    .div-article-stats {
+      border-top: 1px solid $color_text_hero;
+      display: inline-block;
+      padding: .5em 0 0 0;
+    }
+    h1 {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      color: $color_text_hero_deep;
+    }
+    h2 {
+      font-size: 1rem;
+      display: inline-block;
+      margin: 0 .1em;
+      font-weight: 400;
+    }
+    h3 {
+      font-size: .9rem;
+      display: inline-block;
+      margin: 0 .1em;
+      font-weight: 400;
+    }
+    button {
+      display: block;
+      font-family: $altFontStack;
+      letter-spacing: .1em;
+      font-weight: 700;
+      transition: .5s;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      background-color: transparent;
+      color: $color_text_hero_deep;
+      border: 1px solid $color_text_hero_deep;
+      border-radius: .5em;
+      padding: .5em .75em;
+      margin: .5em 0 0 0;
+    }
+  	button:hover {
+  		color: $color_bg_main;
+  		background-color: $color_text_hero_deep;
+  	}
+  }
+}
+/* Component - Secondary, Tertiary Articles: End */
+
+/* Component - Primary Article Intro: Start */
+article:first-child {
   width: 100%;
   height: 100vh;
-  video.video-header-bg {
+  margin: 0;
+  .bg-header-filter {
+    z-index: 101;
+    background-color: $color_bg_hero;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  video.bg-header-video,
+  .bg-header-img {
     position: absolute;
     z-index: 100;
     object-fit: cover;
     object-position: center center;
     width: 100%;
     height: 100%;
+    border-radius: 0;
   }
   .header-article {
     color: $color_text_hero;
+    background-color: transparent;
+    border-radius: 0;
     position: relative;
     z-index: 105;
     top: 50%;
@@ -36,6 +119,7 @@ article {
     transform: translate(-50%,-50%);
     text-align: center;
     line-height: 1;
+    padding: 0;
     .div-article-stats {
       border-top: 1px solid $color_text_hero;
       display: inline-block;
