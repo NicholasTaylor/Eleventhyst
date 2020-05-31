@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+@keyframes navSlideIn {
+  0% {
+    left: $navHidden;
+  }
+  100% {
+    left: $navVisible;
+  }
+}
+
+@keyframes navSlideOut {
+  0% {
+    left: $navVisible;
+  }
+  100% {
+    left: $navHidden;
+  }
+}

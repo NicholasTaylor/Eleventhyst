@@ -1,0 +1,58 @@
+@import "variables.scss";
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  li {
+    list-style-type: none;
+    width: 50%;
+    text-align: center;
+    font-family: $altFontStack;
+    text-transform: uppercase;
+    color: $color_text_hero_deep;
+    font-weight: 700;
+  }
+}
+
+#div-btn-nav {
+  position: fixed;
+  z-index: 205;
+  left: .75em;
+  top: .5em;
+  img {
+    width: 1.25em;
+  }
+}
+
+#nav-top {
+  position: fixed;
+  z-index: 200;
+  width: 80%;
+  left: -100%;
+  background-color: $color_bg_nav;
+  height: 100%;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  #div-nav-deactivate {
+    position: absolute;
+    z-index: 199;
+    width: 100vw;
+    height: 100vh;
+  }
+  ul {
+    z-index: 204;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    li {
+      padding: 1em 0;
+      font-size: .9rem;
+    }
+  }
+}
+
+#nav-bottom ul li {
+    padding: .5em 0;
+}
