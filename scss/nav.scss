@@ -62,3 +62,20 @@ nav ul {
 #nav-bottom ul li {
     padding: .5em 0;
 }
+
+#div-logo {
+  position: fixed;
+  z-index: 198;
+  width: 100%;
+  text-align: center;
+  padding-top: .75em;
+  background-color: $color_bg_main;
+  height: 2.75em;
+  h1 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $color_text_hero_deep;
+    letter-spacing: 0.25em;
+    line-height: 1;
+  }
+}
