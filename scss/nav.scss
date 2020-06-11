@@ -41,6 +41,7 @@ nav ul {
   height: 100%;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
   #div-nav-deactivate {
     position: absolute;
     z-index: 199;
@@ -65,17 +66,31 @@ nav ul {
 
 #div-logo {
   position: fixed;
-  z-index: 198;
+  top: 0;
+  z-index: 197;
   width: 100%;
   text-align: center;
-  padding-top: .75em;
-  background-color: $color_bg_main;
   height: 2.75em;
+  #div-logo-bg {
+    opacity: 0;
+    background-color: $color_bg_main;
+    width: 100%;
+    height: 100%;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    position: absolute;
+    z-index: 198;
+    animation-fill-mode: forwards;
+  }
   h1 {
     font-size: 1.25rem;
     text-transform: uppercase;
     color: $color_text_hero_deep;
     letter-spacing: 0.25em;
     line-height: 1;
+    z-index: 199;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
